@@ -21,8 +21,14 @@ const heading = document.querySelector('#administra');
 let editando = false;
 
 
+window.onload = () => {
+    eventListeners();
+
+    createDB();
+}
+
 // Eventos
-eventListeners();
+
 function eventListeners() {
     mascotaInput.addEventListener('change', datosCita);
     propietarioInput.addEventListener('change', datosCita);
